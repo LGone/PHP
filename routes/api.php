@@ -29,19 +29,25 @@ Route::prefix('admin')->group(function(){
     Route::post('insertarea','admin\AreaController@InsertArea'); //新增
     Route::post('deletearea','admin\AreaController@DeleteArea'); //删除
 
-
-});
-
-/**
- *  news 新闻路由配置
- * */
-
-Route::prefix('Admin')->group(function(){
-
     Route::get('NewsList','admin\NewsController@GetNewsList');  //获取所有新闻
     Route::post('InsertNews','admin\NewsController@InsertNews');  //新增新闻
     Route::post('UpdateNews','admin\NewsController@UpdateNews');  //修改新闻
     Route::post('DeleteNews','admin\NewsController@DeleteNews');  //删除新闻
+    Route::get('TestRedis','admin\RedisController@TestRedis');
+
+});
+
+/**
+ *   person 路由配置
+ * */
+
+Route::prefix('other')->group(function(){
+
+    Route::get('PersonList','other\PersonController@GetPersonList'); //获得所有人员列表
+    Route::post('InsertPerson','other\PersonController@InsertPerson');  //新增人员
+    Route::post('UpdatePerson','other\PersonController@UpdatePerson');  //修改人员
+    Route::post('DeletePerson','other\PersonController@DeletePerson');  //删除人员
+
 });
 
 
