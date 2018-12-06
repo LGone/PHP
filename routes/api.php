@@ -18,6 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
+
 /**
  *  运营路由配置
  * */
@@ -43,10 +44,10 @@ Route::prefix('admin')->group(function(){
 
 Route::prefix('other')->group(function(){
 
-    Route::get('PersonList','other\PersonController@GetPersonList'); //获得所有人员列表
-    Route::post('InsertPerson','other\PersonController@InsertPerson');  //新增人员
-    Route::post('UpdatePerson','other\PersonController@UpdatePerson');  //修改人员
-    Route::post('DeletePerson','other\PersonController@DeletePerson');  //删除人员
+    Route::get('PersonList','other\PersonController@GetPersonList')->middleware("checkPerson"); //获得所有人员列表
+    Route::post('InsertPerson','other\PersonController@InsertPerson')->middleware("checkPerson");  //新增人员
+    Route::post('UpdatePerson','other\PersonController@UpdatePerson')->middleware("checkPerson");  //修改人员
+    Route::post('DeletePerson','other\PersonController@DeletePerson')->middleware("checkPerson");  //删除人员
 
 });
 
