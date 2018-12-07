@@ -1,0 +1,651 @@
+define({ "api": [
+  {
+    "type": "get",
+    "url": "/api/athlete/AthleteList",
+    "title": "AthleteList",
+    "description": "<p>运动员注册API</p>",
+    "group": "T1_API",
+    "parameter": {
+      "examples": [
+        {
+          "title": "请求参数格式:",
+          "content": "/api/athlete/AthleteList",
+          "type": "string"
+        }
+      ]
+    },
+    "version": "1.0.0",
+    "error": {
+      "examples": [
+        {
+          "title": "错误返回值:",
+          "content": "{\n    \"return_code\": \"SUCCESS\",\n    \"request\": \"http://www.qq.com:8000/api/athlete/AthleteList\",\n    \"message\": \"接口请求错误\",\n    \"error_code\": 400113,\n    \"api_code\": 400113,\n    \"data\": []\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "正确返回值:",
+          "content": "{\n    \"return_code\": \"SUCCESS\",\n    \"request\": \"http://www.qq.com:8000/api/athlete/AthleteList\",\n    \"message\": \"成功\",\n    \"is_error\": false,\n    \"data\": [{\n    \"F_ID\": 8,\n    \"F_Name\": \"fajlfjdalkfjdakl\",\n    \"F_Gender\": 1,\n    \"F_BodyCode\": \"431122199505123812\",\n    \"F_Birthday\": \"19950512\",\n    \"F_NationID\": 101,\n    \"F_SubdivisionID\": 1001,\n    \"F_EventID\": 11,\n    \"F_LevelID\": \"1\",\n    \"F_RegCode\": \"TianJing\",\n    \"F_EffectiveDate\": \"4\",\n    \"F_Issuingauthority\": \"体育局\",\n    \"F_Address\": \"湖南\",\n    \"F_Blood\": \"AB\",\n    \"F_UnitCode\": \"A1000001\",\n    \"F_Phone\": \"13789223747\",\n    \"F_AgeBone\": \"12\",\n    \"F_Address2\": \"上海\",\n    \"F_Photo\": \"/Reg_Athlete\",\n    \"F_UnitID\": 1,\n    \"F_FisrtUnit\": 1,\n    \"F_TrainingUnit\": 1,\n    \"F_Remark\": null,\n    \"F_UserID\": 1,\n    \"F_Date\": 2018\n    }]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/AthleteApidoc/Athlete.php",
+    "groupTitle": "T1_API",
+    "name": "GetApiAthleteAthletelist",
+    "sampleRequest": [
+      {
+        "url": "http://www.qq.com:8000/api/athlete/AthleteList"
+      }
+    ]
+  },
+  {
+    "type": "get",
+    "url": "/api/athlete/AthleteListPage",
+    "title": "AthleteListPage",
+    "description": "<p>运动员注册API</p>",
+    "group": "T1_API",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "page",
+            "description": "<p>每页5条</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "请求参数格式:",
+          "content": "/api/athlete/AthleteListPage?page=1",
+          "type": "string"
+        }
+      ]
+    },
+    "version": "1.0.0",
+    "error": {
+      "examples": [
+        {
+          "title": "错误返回值:",
+          "content": "{\n    \"return_code\": \"SUCCESS\",\n    \"request\": \"http://www.qq.com:8000/api/athlete/AthleteListPage\",\n    \"message\": \"接口请求错误\",\n    \"error_code\": 400113,\n    \"api_code\": 400113,\n    \"data\": []\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "正确返回值:",
+          "content": "{\n    \"return_code\": \"SUCCESS\",\n    \"request\": \"http://www.qq.com:8000/api/athlete/AthleteListPage\",\n    \"message\": \"成功\",\n    \"is_error\": false,\n    \"data\": [{\n    \"F_ID\": 8,\n    \"F_Name\": \"fajlfjdalkfjdakl\",\n    \"F_Gender\": 1,\n    \"F_BodyCode\": \"431122199505123812\",\n    \"F_Birthday\": \"19950512\",\n    \"F_NationID\": 101,\n    \"F_SubdivisionID\": 1001,\n    \"F_EventID\": 11,\n    \"F_LevelID\": \"1\",\n    \"F_RegCode\": \"TianJing\",\n    \"F_EffectiveDate\": \"4\",\n    \"F_Issuingauthority\": \"体育局\",\n    \"F_Address\": \"湖南\",\n    \"F_Blood\": \"AB\",\n    \"F_UnitCode\": \"A1000001\",\n    \"F_Phone\": \"13789223747\",\n    \"F_AgeBone\": \"12\",\n    \"F_Address2\": \"上海\",\n    \"F_Photo\": \"/Reg_Athlete\",\n    \"F_UnitID\": 1,\n    \"F_FisrtUnit\": 1,\n    \"F_TrainingUnit\": 1,\n    \"F_Remark\": null,\n    \"F_UserID\": 1,\n    \"F_Date\": 2018\n    }]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/AthleteApidoc/Athlete.php",
+    "groupTitle": "T1_API",
+    "name": "GetApiAthleteAthletelistpage",
+    "sampleRequest": [
+      {
+        "url": "http://www.qq.com:8000/api/athlete/AthleteListPage"
+      }
+    ]
+  },
+  {
+    "type": "get",
+    "url": "/api/athlete/AthleteListSel",
+    "title": "AthleteListSel",
+    "description": "<p>运动员注册API</p>",
+    "group": "T1_API",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Name",
+            "description": "<p>运动员姓名</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Address",
+            "description": "<p>运动员户籍地址</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "请求参数格式:",
+          "content": "/api/athlete/AthleteListSel?F_Name=go&F_Address=湖",
+          "type": "string"
+        }
+      ]
+    },
+    "version": "1.0.0",
+    "error": {
+      "examples": [
+        {
+          "title": "错误返回值:",
+          "content": "{\n    \"return_code\": \"SUCCESS\",\n    \"request\": \"http://www.qq.com:8000/api/athlete/AthleteListSel\",\n    \"message\": \"接口请求错误\",\n    \"error_code\": 400113,\n    \"api_code\": 400113,\n    \"data\": []\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "正确返回值:",
+          "content": "{\n    \"return_code\": \"SUCCESS\",\n    \"request\": \"http://www.qq.com:8000/api/athlete/AthleteListSel?F_Name=go\",\n    \"message\": \"成功\",\n    \"is_error\": false,\n    \"data\": [{\n    \"F_ID\": 5,\n    \"F_Name\": \"gogogogogo\",\n    \"F_Gender\": 1,\n    \"F_BodyCode\": \"431122199505123812\",\n    \"F_Birthday\": \"19950512\",\n    \"F_NationID\": 101,\n    \"F_SubdivisionID\": 1001,\n    \"F_EventID\": 11,\n    \"F_LevelID\": \"1\",\n    \"F_RegCode\": \"TianJing\",\n    \"F_EffectiveDate\": \"4\",\n    \"F_Issuingauthority\": \"体育局\",\n    \"F_Address\": \"湖南\",\n    \"F_Blood\": \"AB\",\n    \"F_UnitCode\": \"A1000001\",\n    \"F_Phone\": \"13789223747\",\n    \"F_AgeBone\": \"12\",\n    \"F_Address2\": \"上海\",\n    \"F_Photo\": \"/Reg_Athlete\",\n    \"F_UnitID\": 1,\n    \"F_FisrtUnit\": 1,\n    \"F_TrainingUnit\": 1,\n    \"F_Remark\": null,\n    \"F_UserID\": 1,\n    \"F_Date\": 2018\n    }]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/AthleteApidoc/Athlete.php",
+    "groupTitle": "T1_API",
+    "name": "GetApiAthleteAthletelistsel",
+    "sampleRequest": [
+      {
+        "url": "http://www.qq.com:8000/api/athlete/AthleteListSel"
+      }
+    ]
+  },
+  {
+    "type": "post",
+    "url": "/api/athlete/DeleteAthlete",
+    "title": "DeleteAthlete",
+    "description": "<p>运动员注册API</p>",
+    "group": "T1_API",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_ID",
+            "description": "<p>主键ID</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "请求参数格式:",
+          "content": "/api/athlete/DeleteAthlete?F_ID=10",
+          "type": "string"
+        }
+      ]
+    },
+    "version": "1.0.0",
+    "error": {
+      "examples": [
+        {
+          "title": "错误返回值:",
+          "content": "{\n    \"return_code\": \"SUCCESS\",\n    \"request\": \"http://www.qq.com:8000/api/athlete/DeleteAthlete\",\n    \"message\": \"接口请求错误\",\n    \"error_code\": 400113,\n    \"api_code\": 400113,\n    \"data\": []\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "正确返回值:",
+          "content": "    {\n        \"return_code\": \"SUCCESS\",\n        \"request\": \"http://www.qq.com:8000/api/athlete/DeleteAthlete?F_ID=10\",\n        \"message\": \"成功\",\n        \"is_error\": false,\n        \"data\": 1\n    }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/AthleteApidoc/Athlete.php",
+    "groupTitle": "T1_API",
+    "name": "PostApiAthleteDeleteathlete",
+    "sampleRequest": [
+      {
+        "url": "http://www.qq.com:8000/api/athlete/DeleteAthlete"
+      }
+    ]
+  },
+  {
+    "type": "post",
+    "url": "/api/athlete/InsertAthlete",
+    "title": "InsertAthlete",
+    "description": "<p>运动员注册API</p>",
+    "group": "T1_API",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Name",
+            "description": "<p>姓名</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_Gender",
+            "description": "<p>性别</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_BodyCode",
+            "description": "<p>身份证号</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Birthday",
+            "description": "<p>生日</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_NationID",
+            "description": "<p>民族</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_SubdivisionID",
+            "description": "<p>所在地</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_EventID",
+            "description": "<p>在训项目</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_LevelID",
+            "description": "<p>运动员等级</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_RegCode",
+            "description": "<p>注册证号</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_EffectiveDate",
+            "description": "<p>有效期</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Issuingauthority",
+            "description": "<p>发证机关</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Address",
+            "description": "<p>户籍地址</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Blood",
+            "description": "<p>血型</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_UnitCode",
+            "description": "<p>学籍卡号</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Phone",
+            "description": "<p>联系方式</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_AgeBone",
+            "description": "<p>当前骨龄值</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Address2",
+            "description": "<p>现在家庭住址</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Photo",
+            "description": "<p>照片路径</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_UnitID",
+            "description": "<p>注册单位</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_FisrtUnit",
+            "description": "<p>原始单位</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_TrainingUnit",
+            "description": "<p>在训单位</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Remark",
+            "description": "<p>备注</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_UserID",
+            "description": "<p>创建人</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_Date",
+            "description": "<p>创建时间</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "请求参数格式:",
+          "content": "/api/athlete/InsertAthlete?F_Name=hahahhahahahhaha&F_Gender=1&F_BodyCode=431122199505123812&F_Birthday=19950512&F_NationID=101&F_SubdivisionID=1001&F_EventID=11&F_LevelID=1&F_RegCode=TianJing&F_EffectiveDate=4&F_Issuingauthority=%E4%BD%93%E8%82%B2%E5%B1%80&F_Address=%E6%B9%96%E5%8D%97&F_Blood=AB&F_UnitCode=A1000001&F_Phone=13789223747&F_AgeBone=12&F_Address2=%E4%B8%8A%E6%B5%B7&F_Photo=/Reg_Athlete&F_UnitID=1&F_FisrtUnit=1&F_TrainingUnit=1&F_Remark&F_UserID=1&F_Date=2018",
+          "type": "string"
+        }
+      ]
+    },
+    "version": "1.0.0",
+    "error": {
+      "examples": [
+        {
+          "title": "错误返回值:",
+          "content": "{\n    \"return_code\": \"SUCCESS\",\n    \"request\": \"http://www.qq.com:8000/api/athlete/InsertAthlete\",\n    \"message\": \"接口请求错误\",\n    \"error_code\": 400113,\n    \"api_code\": 400113,\n    \"data\": []\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "正确返回值:",
+          "content": "    {\n        \"return_code\": \"SUCCESS\",\n        \"request\": \"http://www.qq.com:8000/api/athlete/InsertAthlete?F_Name=hahahhahahahhaha&F_Gender=1&F_BodyCode=431122199505123812&F_Birthday=19950512&F_NationID=101&F_SubdivisionID=1001&F_EventID=11&F_LevelID=1&F_RegCode=TianJing&F_EffectiveDate=4&F_Issuingauthority=%E4%BD%93%E8%82%B2%E5%B1%80&F_Address=%E6%B9%96%E5%8D%97&F_Blood=AB&F_UnitCode=A1000001&F_Phone=13789223747&F_AgeBone=12&F_Address2=%E4%B8%8A%E6%B5%B7&F_Photo=/Reg_Athlete&F_UnitID=1&F_FisrtUnit=1&F_TrainingUnit=1&F_Remark&F_UserID=1&F_Date=2018\",\n        \"message\": \"成功\",\n        \"is_error\": false,\n        \"data\": {\n        \"F_Name\": \"hahahhahahahhaha\",\n        \"F_Gender\": \"1\",\n        \"F_BodyCode\": \"431122199505123812\",\n        \"F_Birthday\": \"19950512\",\n        \"F_NationID\": \"101\",\n        \"F_SubdivisionID\": \"1001\",\n        \"F_EventID\": \"11\",\n        \"F_LevelID\": \"1\",\n        \"F_RegCode\": \"TianJing\",\n        \"F_EffectiveDate\": \"4\",\n        \"F_Issuingauthority\": \"体育局\",\n        \"F_Address\": \"湖南\",\n        \"F_Blood\": \"AB\",\n        \"F_UnitCode\": \"A1000001\",\n        \"F_Phone\": \"13789223747\",\n        \"F_AgeBone\": \"12\",\n        \"F_Address2\": \"上海\",\n        \"F_Photo\": \"/Reg_Athlete\",\n        \"F_UnitID\": \"1\",\n        \"F_FisrtUnit\": \"1\",\n        \"F_TrainingUnit\": \"1\",\n        \"F_Remark\": null,\n        \"F_UserID\": \"1\",\n        \"F_Date\": \"2018\",\n        \"id\": 9\n    }\n    }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/AthleteApidoc/Athlete.php",
+    "groupTitle": "T1_API",
+    "name": "PostApiAthleteInsertathlete",
+    "sampleRequest": [
+      {
+        "url": "http://www.qq.com:8000/api/athlete/InsertAthlete"
+      }
+    ]
+  },
+  {
+    "type": "post",
+    "url": "/api/athlete/UpdateAthlete",
+    "title": "UpdateAthlete",
+    "description": "<p>运动员注册API</p>",
+    "group": "T1_API",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_ID",
+            "description": "<p>主键ID</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Name",
+            "description": "<p>姓名</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_Gender",
+            "description": "<p>性别</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_BodyCode",
+            "description": "<p>身份证号</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Birthday",
+            "description": "<p>生日</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_NationID",
+            "description": "<p>民族</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_SubdivisionID",
+            "description": "<p>所在地</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_EventID",
+            "description": "<p>在训项目</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_LevelID",
+            "description": "<p>运动员等级</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_RegCode",
+            "description": "<p>注册证号</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_EffectiveDate",
+            "description": "<p>有效期</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Issuingauthority",
+            "description": "<p>发证机关</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Address",
+            "description": "<p>户籍地址</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Blood",
+            "description": "<p>血型</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_UnitCode",
+            "description": "<p>学籍卡号</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Phone",
+            "description": "<p>联系方式</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_AgeBone",
+            "description": "<p>当前骨龄值</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Address2",
+            "description": "<p>现在家庭住址</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Photo",
+            "description": "<p>照片路径</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_UnitID",
+            "description": "<p>注册单位</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_FisrtUnit",
+            "description": "<p>原始单位</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_TrainingUnit",
+            "description": "<p>在训单位</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "F_Remark",
+            "description": "<p>备注</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_UserID",
+            "description": "<p>创建人</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "F_Date",
+            "description": "<p>创建时间</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "请求参数格式:",
+          "content": "/api/athlete/UpdateAthlete?F_Name=201819&F_Gender=1&F_BodyCode=431122199505123812&F_Birthday=19950512&F_NationID=101&F_SubdivisionID=1001&F_EventID=11&F_LevelID=1&F_RegCode=TianJing&F_EffectiveDate=4&F_Issuingauthority=%E4%BD%93%E8%82%B2%E5%B1%80&F_Address=%E6%B9%96%E5%8D%97&F_Blood=AB&F_UnitCode=A1000001&F_Phone=13789223747&F_AgeBone=12&F_Address2=%E4%B8%8A%E6%B5%B7&F_Photo=/Reg_Athlete&F_UnitID=1&F_FisrtUnit=1&F_TrainingUnit=1&F_Remark&F_UserID=1&F_Date=2018&F_ID=9",
+          "type": "string"
+        }
+      ]
+    },
+    "version": "1.0.0",
+    "error": {
+      "examples": [
+        {
+          "title": "错误返回值:",
+          "content": "{\n    \"return_code\": \"SUCCESS\",\n    \"request\": \"http://www.qq.com:8000/api/athlete/UpdateAthlete\",\n    \"message\": \"接口请求错误\",\n    \"error_code\": 400113,\n    \"api_code\": 400113,\n    \"data\": []\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "正确返回值:",
+          "content": "    {\n        \"return_code\": \"SUCCESS\",\n        \"request\": \"http://www.qq.com:8000/api/athlete/UpdateAthlete?F_Name=201819&F_Gender=1&F_BodyCode=431122199505123812&F_Birthday=19950512&F_NationID=101&F_SubdivisionID=1001&F_EventID=11&F_LevelID=1&F_RegCode=TianJing&F_EffectiveDate=4&F_Issuingauthority=%E4%BD%93%E8%82%B2%E5%B1%80&F_Address=%E6%B9%96%E5%8D%97&F_Blood=AB&F_UnitCode=A1000001&F_Phone=13789223747&F_AgeBone=12&F_Address2=%E4%B8%8A%E6%B5%B7&F_Photo=/Reg_Athlete&F_UnitID=1&F_FisrtUnit=1&F_TrainingUnit=1&F_Remark&F_UserID=1&F_Date=2018&F_ID=9\",\n        \"message\": \"成功\",\n        \"is_error\": false,\n        \"data\": 1\n    }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/Http/AthleteApidoc/Athlete.php",
+    "groupTitle": "T1_API",
+    "name": "PostApiAthleteUpdateathlete",
+    "sampleRequest": [
+      {
+        "url": "http://www.qq.com:8000/api/athlete/UpdateAthlete"
+      }
+    ]
+  }
+] });

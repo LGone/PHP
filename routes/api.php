@@ -51,4 +51,18 @@ Route::prefix('other')->group(function(){
 
 });
 
+/**
+ *   Athlete 路由配置
+ * */
+Route::prefix('athlete')->group(function(){
+    Route::get('AthleteList','athlete\AthleteController@AthleteList'); //获取运动员所有数据
+    Route::get('AthleteListPage','athlete\AthleteController@AthleteListPage'); //自定义分页
+    Route::get('AthleteListSel','athlete\AthleteController@AthleteListSel'); //模糊查询
+    Route::post('InsertAthlete','athlete\AthleteController@InsertAthlete'); //新增运动员
+    Route::post('UpdateAthlete','athlete\AthleteController@UpdateAthlete'); //修改运动员
+    Route::post('DeleteAthlete','athlete\AthleteController@DeleteAthlete'); //删除运动员
+});
+
+
+
 
