@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/welcome','Other\WelcomeController@index');
+
+Route::post('/upload','Upload\UploadController@upload');
+
